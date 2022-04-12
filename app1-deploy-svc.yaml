@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp1-deploy
+  namespace: app 
+spec:
+  selector:
+    matchLabels:
+      app: webapp1
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: webapp1
+    spec:
+      containers:
+      - name: webapp1
+        image: acrlengochieu.azurecr.io/fe
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 4200
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: webapp1-svc
+  namespace: app
+spec:
+  selector:
+    app: webapp1
+  ports:
+  - port: 4200
+  type: ClusterIP # LoadBalancer # NodePort # 
