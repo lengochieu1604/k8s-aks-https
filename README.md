@@ -117,6 +117,8 @@ kubectl describe cert app-web-cert --namespace app
 kubectl get services -n app
 
 # Now test the app with HTTPS: https://frontend.<ip-address>.nip.io
+	![image](https://user-images.githubusercontent.com/98753976/163035628-401c5cf1-1b86-4e2e-8fb1-31733bc346eb.png)
+
 
 # Cleanup resources
 helm delete cert-manager --namespace cert-manager
