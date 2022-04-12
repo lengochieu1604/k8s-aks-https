@@ -1,4 +1,5 @@
 # Kubernetes Ingress with TLS/SSL  
+![image](https://user-images.githubusercontent.com/98753976/163035948-39c701da-fe01-45e9-a8c8-d4ef956fa366.png)
 
 This repo is demoing the configuration for Ingress and HTTPS/TLS/SSL in Kubernetes.  
 
@@ -117,6 +118,7 @@ kubectl describe cert app-web-cert --namespace app
 kubectl get services -n app
 
 # Now test the app with HTTPS: https://frontend.<ip-address>.nip.io
+	
 ![image](https://user-images.githubusercontent.com/98753976/163035851-f3d0a5b4-aaa7-43a8-bf9c-22b8f27ce44d.png)
 	
 # Cleanup resources
